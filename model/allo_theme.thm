@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view nodetheme="Martha">
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+</node>
+
+<node shape="Box" color="Green">
+   <type name="PackageVersion"/>
+</node>
+
+<node shape="Box" color="Yellow">
+   <type name="ModuleName"/>
+</node>
+
+<node shape="Ellipse" color="Red">
+   <type name="Manifest"/>
+</node>
+
+<node shape="Parallelogram" color="Blue">
+   <type name="Package"/>
+</node>
+
+<node shape="Trapezoid" color="Red">
+   <type name="ManifestLock"/>
+</node>
+
+<edge constraint="no">
+   <relation name="dependencies"> <type name="Manifest"/> <type name="PackageVersion"/> </relation>
+   <relation name="final_dependencies"> <type name="ManifestLock"/> <type name="PackageVersion"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
